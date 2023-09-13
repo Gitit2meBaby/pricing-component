@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+
+<body>
+  <main>
+    <div class="title">
+      <h1>Our Pricing</h1>
+    </div>
+
+    <div class="toggle-wrapper">
+      <p>Annually</p>
+      <input type="checkbox" id="switch" /><label for="switch"></label>
+      <p class="pad-me">Monthly</p>
+    </div>
+
+    <div class="app">
+      <div class="box-container-left">
+        <div class="box">
+          <h2>Basic</h2>
+          <h3 id="basicPriceDisplay">$199.99</h3>
+          <div class="info">
+            <p>500 GB Storage</p>
+          </div>
+          <div class="info middle">
+            <p>2 Users Allowed</p>
+          </div>
+          <div class="info">
+            <p>Send up to 3 GB</p>
+          </div>
+          <button class="primary-btn">Learn More</button>
+        </div>
+      </div>
+
+      <div class="accent-box">
+        <div class="accent-content">
+          <h2 class="accent">Premium</h2>
+          <h3 id="premiumPriceDisplay">$249.99</h3>
+          <div class="info accent">
+            <p>1 TB Storage</p>
+          </div>
+          <div class="info accent middle">
+            <p>5 Users Allowed</p>
+          </div>
+          <div class="info accent">
+            <p>Send up to 10 GB</p>
+          </div>
+          <button class="accent-button">Learn More</button>
+        </div>
+      </div>
+
+      <div class="box-container-right">
+        <div class="box">
+          <h2>Master</h2>
+          <h3 id="masterPriceDisplay">$399.99</h3>
+          <div class="info">
+            <p>2 TB Storage</p>
+          </div>
+          <div class="info middle">
+            <p>10 Users Allowed</p>
+          </div>
+          <div class="info">
+            <p>Send up to 20 GB</p>
+          </div>
+          <button class="primary-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+:root {
+    --Linear-Gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --Linear-Gradient-bottom: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    /* ### Neutral */
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background: url(images/bg-top.svg) no-repeat top right,
+        url(images/bg-bottom.svg) no-repeat bottom left,
+        var(--Very-Light-Grayish-Blue);
+    height: 100dvh;
+    gap: 3rem;
+    padding: 5rem
+}
+
+.title h1 {
+    font-size: 2rem;
+    color: var(--Grayish-Blue);
+}
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    color: var(--Light-Grayish-Blue);
+    gap: 1rem;
+}
+
+.pad-me {
+    padding-left: .8rem;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        padding: 5rem .5rem;
+    }
+}
+
+/* BOXES */
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-container-left {
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.box-container-right {
+    padding: 1.5rem 2rem 1.5rem 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 100%;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--Grayish-Blue);
+}
+
+h3 {
+    font-size: 4.5rem;
+    padding: 1.5rem 0;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--Grayish-Blue);
+    border-bottom: 1px solid var(--Grayish-Blue);
+    width: 100%;
+    color: var(--Grayish-Blue);
+    padding: 1rem;
+}
+
+.middle {
+    border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding-bottom: 6rem;
+    }
+
+    .box-container-left {
+        padding: 0;
+    }
+
+    .box-container-right {
+        padding: 0;
+    }
+
+    .box {
+        width: 65w;
+    }
+
+    .toggle-wrapper {
+        padding-bottom: 2rem;
+    }
+}
+
+/* ACCENT BOX */
+.accent-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--Linear-Gradient-bottom);
+    padding: 1rem;
+    height: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+}
+
+.accent-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accent-box h3 {
+    color: white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.accent {
+    border-color: var(--Very-Light-Grayish-Blue);
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .accent-box {
+        padding: 2rem 0;
+        margin-bottom: -2rem;
+    }
+
+    .accent-content {
+        width: 75%;
+    }
+
+    .accent-button {
+        width: 115%;
+    }
+}
+
+/* TOGGLE SWITCH */
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background: var(--Linear-Gradient);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+/* BUTTONS */
+button {
+    border: none;
+    border-radius: .3rem;
+    width: 115%;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin-top: 2rem;
+}
+
+.primary-btn {
+    background: var(--Linear-Gradient);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: transparent;
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.accent-button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.accent-button:hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
